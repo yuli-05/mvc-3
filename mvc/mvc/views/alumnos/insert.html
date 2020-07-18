@@ -1,0 +1,117 @@
+
+<head>
+    <title>CSS Framework</title>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(33, 184, 139);">
+        
+        <a href="#" class="navbar-brand">Formulario</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--<div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Products</a>
+                </li>
+            </ul>-->
+        </div>
+
+    </nav>
+
+    <form  method="POST" action="" class="main-form needs-validation" novalidate>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="firstname">Nombre</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control"required>
+                    <!--<div class="invalid-feedback">Looks good!</div> -->
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="lastname">Primer Apellido</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control"required>
+                   <!-- <small class="form-text text-muted">
+                        This should be your last name.
+                    </small> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="lastname2">Segundo Apellido</label>
+                    <input type="text" name="lastname2" id="lastname2" class="form-control"required>
+                    <!--<div class="invalid-feedback">Looks good!</div>-->
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="Matricula">Matricula </label>
+                    <input type="text" name="Matricula" id="Matricula" class="form-control"required>
+                    <!--<small class="form-text text-muted">
+                        This should be your last name.
+                    </small> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Edad">Edad</label>
+            <input type="number" name="Edad" id="Edad" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Fecha">Fecha de nacimiento</label>
+            <input type="date" name="Fecha" id="Fecha" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Sexo">Sexo</label>
+            <select name="Sexo" id="Sexo" class="form-control">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Estado">Estado Civil</label>
+            <select name="Estado" id="Estado" class="form-control">
+                <option value="Soltero">Soltero(a)</option>
+                <option value="Casado">Casado(a)</option>
+            </select>
+        </div>
+
+
+        <!--<div class="form-check">
+            <input type="checkbox" id="accept-terms" class="form-check-input">
+            <label for="accept-terms" class="form-check-label">Accept Terms &amp; Conditions</label>
+        </div>-->
+        <button type="submit" class="btn btn-primary">Insert</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var form = document.querySelector('.needs-validation');
+
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+    </script>
+</body>
