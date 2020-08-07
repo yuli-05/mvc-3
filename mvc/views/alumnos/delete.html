@@ -1,0 +1,68 @@
+$def with(result)
+
+  <body>
+    <!--Vista inicial-->
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(33, 184, 139);">
+        <a href="#" class="navbar-brand">Delete</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Page Content -->
+    <main role="main" class="container my-auto">
+    <br></br>
+
+    <form method="POST" action="">
+      
+      <div class="form-group">
+        <label for="Nombre">Nombre del alumno</label>
+        <input type="text" readonly class="form-control" id="Nombre" name="Nombre" value="$result['Nombre']">
+      </div>
+
+      <div class="form-group">
+        <label for="Apellido1">Apellido paterno del alumno</label>
+        <input type="text" readonly class="form-control" id="Apellido1" name="Apellido1" value="$result['lastname']">
+      </div>
+
+      <div class="form-group">
+        <label for="Apellido2">Apellido materno del alumno</label>
+        <input type="text" readonly class="form-control" id="Apellido2" name="Apellido2" value="$result['lastname2']">
+      </div>
+
+      <div class="form-group">
+        <label for="Matricula">Matricula del alumno</label>
+        <input type="text" readonly class="form-control" id="Matricula" name="Matricula" value="$result['Matricula']">
+      </div>
+
+      <div class="form-group">
+        <label for="Edad">Edad del alumno</label>
+        <input type="text" readonly class="form-control" id="Edad" name="Edad" value="$result['Edad']">
+      </div>
+
+      <div class="form-group">
+        <label for="Fecha">Fecha de nacimiento del alumno</label>
+        <input type="text" readonly class="form-control" id="Fecha" name="Fecha" value="$result['Fecha']">
+      </div>
+
+      <div class="form-group">
+        <label for="Sexo">Sexo del alumno</label>
+        <input type="text" readonly class="form-control" id="Sexo" name="Sexo" value="$result['Sexo']">
+      </div>
+
+      <div class="form-group">
+        <label for="Estado">Estado civil del alumno</label>
+        <input type="text" readonly class="form-control" id="Estado" name="Estado" value="$result['Estado']">
+      </div>
+
+      <div style="width: 500px;">
+        <a href="list"><button type="button" class="btn" style="background:rgb(33, 184, 139)">Regresar</button></a>
+    </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </div>
+    </form>
+
+    <br></br>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+$def with(result)
+  <head>
+    <title>List</title>
+  </head>
+
+  <body>
+    <!--Vista inicial-->
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(33, 184, 139);">
+        <a href="#" class="navbar-brand">Lista</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Page Content -->
+    <main role="main" class="container my-auto">
+      <br></br>
+        <table class="table">
+            <thead class="thead-ligth" style="background-color: rgb(33, 184, 139);">
+            <tr>
+              <th scope="col">id_alumno</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Primer Apellido</th>
+              <th scope="col">Segundo Apellido</th>
+              <th scope="col">Matricula</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Fecha de Nacimiento</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            $for row in result:
+              <tr>
+                <th scope="row">$row['id_alumno']</th>
+                <td><a href="/view/$row['Matricula']">$row['Nombre']</a></td>
+                <td>$row['lastname']</td>
+                <td>$row['lastname2']</td>
+                <td>$row['Matricula']</td>
+                <td>$row['Edad']</td>
+                <td>$row['Fecha']</td>
+                <td>$row['Sexo']</td>
+                <td>$row['Estado']</td>
+                <td>
+                  <a href="/update/$row['Matricula']"><button type= "button" class="btn" style="background: #75F5A5">Update</button></a></td>
+                  <td>
+                    <a href="/delete/$row['Matricula']"><button type= "button" class="btn" style="background: #75F5A5">Delete</button></a></td>
+              </tr>
+          </tbody>
+        </table>
+
+    <!--<div style="width: 500px;">
+        <a href="insert"><button type="button" class="btn" style="background:#75F5A5">Insert</button></a>
+
+        <a href="view"><button type="button" class="btn" style="background:#75F5A5">View</button></a>
+
+        <a href="update"><button type="button" class="btn" style="background:#75F5A5">Update</button></a>
+
+        <a href="delete"><button type="button" class="btn" style="background:#75F5A5">Delete</button></a>
+
+        <a href="/"><button type="button" class="btn" style="background:#75F5A5">Regresar</button></a>
+    </div>-->
+  </body>
