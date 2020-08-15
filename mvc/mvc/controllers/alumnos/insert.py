@@ -1,5 +1,9 @@
 import web
 
+import mvc.models.alumnos as alumnos
+
+model_alumnos = alumnos.Alumnos()
+
 render = web.template.render("mvc/views/alumnos/", base="template")
 
 class Insert():
@@ -13,6 +17,16 @@ class Insert():
     def POST(self):
         try:
             form = web.input()
-            print(form)
+            firstname = form.firstname
+            lastname = form.lastname
+            lastname2 = form.lastname2
+            Matricula = form.Matricula
+            Edad = form.Edad
+            Fecha = form.Fecha
+            Sexo = form.Sexo
+            Estado = form.Estado
+            model_alumnos.insert(firstname, lastname, lastname2, Matricula, Edad, Fecha, Sexo, Estado)
+            web.seeother('/list')
         except Exception as e:
-            return "Error"
+            print(e)
+            return render.insert()
