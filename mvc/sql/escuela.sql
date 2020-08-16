@@ -1,6 +1,6 @@
-CREATE DATABASE escuela;
 
-USE escuela;
+
+USE mm5gzlu0osfi6uv8;
 
 CREATE TABLE alumnos(
     id_alumno int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
